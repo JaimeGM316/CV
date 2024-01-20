@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0e141b;
+    color: #fff;
+}
+
+.nombre {
+    font-family: 'Consolas', sans-serif;
+    font-size: 1.5em;
+    color: #d7dfee;
+}
+
+.enunciado {
+    font-family: 'Consolas', sans-serif;
+    font-size: 1.5em;
+    color: #58d9d5;
+    margin-bottom: 0px;
+}
+
+.titulo {
+    font-family: 'Consolas', sans-serif;
+    font-size: 1.0em;
+    color: #d7dfee;
+}
+
+.parrafo {
+    margin-top: -15px;
+    font-family: 'Consolas', sans-serif;
+    font-size: 1.0em;
+    color: #bec2c5;
+}
+
+header {
+    margin: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: #151d25;
+}
+
+.header-content {
+    max-width: 1024px;
+    margin: 0 auto; /* Centra horizontalmente */
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+img {
+    border-radius: 20%;
+    max-width: 100px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.header-text {
+    text-align: left; /* Alineación izquierda en pantallas más amplias */
+}
+
+section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #151d25;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.perfil-text {
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+.perfil-text p{
+    margin-top: 15px;
+}
+
+.educacion-text {
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+.experiencia-text {
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+.proyectos-text {
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+.tecnologias-lista {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se desplacen a la siguiente línea si no caben */
+    gap: 5px; /* Ajusta el espacio entre elementos según sea necesario */
+    margin-top: -10px;
+    margin-bottom: 25px;
+}
+
+.tecnologias-lista span {
+    background-color: #18354d;
+    color: #54d3cd;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-family: 'Consolas', sans-serif;
+    font-size: 0.8em;
+}
+
+.contacto-text {
+    margin-top: -20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de la flexión a columna */
+    align-items: center;
+}
+
+.contacto-text p{
+    margin-top: 20px;
+    margin-bottom: -5px;
+}
+
+.contacto-lista {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se desplacen a la siguiente línea si no caben */
+    gap: 5px; /* Ajusta el espacio entre elementos según sea necesario */
+    margin-top: 20px;
+}
+
+.contacto-lista span {
+    background-color: #18354d;
+    color: #54d3cd;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-family: 'Consolas', sans-serif;
+}
+
+a {
+    color: #d7dfee; /* Cambia el color según tu preferencia */
+    text-decoration: none; /* Elimina la subrayado predeterminado */
+}
+
+a:hover {
+    color: #58d9d5; /* Cambia el color al pasar el ratón */
+}
+
+.container {
+    overflow: hidden; /* Para contener los elementos flotantes */
+}
+
+.right {
+    overflow: hidden; /* Para que el contenido flote al lado derecho de la imagen */
+}
+
+.left {
+    float: left;
+    width: 80px; /* Establece el ancho deseado */
+    height: auto; /* Mantiene la proporción original */
+    margin-right: 20px; /* Ajusta el margen entre la imagen y el contenido */
+}
+
+/* Animaciones */
+/* Foto */
+.animation-nombre {
+    opacity: 0;
+    animation: appear 2s ease forwards;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
+}
+/* Nombre */
+.animation-foto {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: appear 1s ease forwards;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animaciones */
+
+/* Animaciones */
+
+/* Móvil */
+@media only screen and (max-width: 370px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .header-text {
+        align-items: center; /* Alinea verticalmente */
+        text-align: center;
+    }
+
+    img {
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+
+    .nombre {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .container img{
+        margin-right: 0px;
+    }
+
+    section {
+        margin: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+    
+    .left {
+        width: 100px;
+        height: auto;
+        margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+    }
+
+}
+
+/* Tabletas */
+@media only screen and (min-width: 370px) and (max-width: 1023px) {
+    .header-content {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    section {
+        margin: 10px;
+    }
+}
+
+/* PC */
+@media only screen and (min-width: 1024px) {
+
+    img {
+        max-width: 200px;
+    }
+
+    .header-text h1 {
+        font-size: 3.5em;
+    }
+
+    .header-text p {
+        font-size: 2em;
+    }
+}
